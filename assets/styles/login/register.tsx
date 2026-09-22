@@ -1,0 +1,153 @@
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { height } = Dimensions.get('window');
+
+export default StyleSheet.create({
+  root: {
+    flex: 1,
+    backgroundColor: '#000000',
+  },
+  bgImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    width: '100%',
+    height: '55%',
+  },
+  overlay: {
+    flex: 1,
+    alignItems: 'center',
+    paddingTop: height * 0.12,
+  },
+  logo: {
+    width: 180,
+    height: 180,
+    marginBottom: 20,
+  },
+  card: {
+    width: '100%',
+    flex: 1,
+    backgroundColor: '#ffffff',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    paddingHorizontal: 25,
+    paddingTop: 30,
+  },
+  title: {
+    fontFamily: 'VenusRising-Bold',
+    fontSize: 30,
+    color: '#000000',
+    textAlign: 'left',
+    letterSpacing: 0.5,
+  },
+  subtitle: {
+    fontSize: 18,
+    color: '#bcbec5',
+    textAlign: 'left',
+    marginTop: 6,
+  },
+  blueLine: {
+    width: '5%',
+    height: 3,
+    backgroundColor: '#3ad5ec',
+    marginTop: 10,
+    marginBottom: 25,
+    borderRadius: 2,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#dddddd',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    height: 50,
+    marginBottom: 15,
+    backgroundColor: '#fafafa',
+  },
+  inputIcon: {
+    width: 20,
+    height: 20,
+    marginRight: 10,
+    tintColor: '#666666',
+  },
+  input: {
+    flex: 1,
+    fontSize: 15,
+    color: '#000000',
+  },
+  mainButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#000000',
+    height: 52,
+    borderRadius: 8,
+    marginBottom: 25,
+  },
+  mainButtonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginRight: 8,
+  },
+  mainButtonIcon: {
+    width: 18,
+    height: 18,
+    tintColor: '#ffffff',
+  },
+  dividerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  dividerLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#dddddd',
+  },
+  dividerText: {
+    marginHorizontal: 10,
+    fontSize: 13,
+    color: '#888888',
+  },
+  socialRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 20,
+  },
+  socialButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#dddddd',
+    borderRadius: 8,
+    height: 50,
+    flex: 1,
+    marginHorizontal: 5,
+    backgroundColor: '#ffffff',
+  },
+  socialIcon: {
+    width: 22,
+    height: 22,
+    marginRight: 8,
+  },
+  socialText: {
+    fontSize: 15,
+    color: '#333333',
+    fontWeight: '500',
+  },
+  registerText: {
+    textAlign: 'center',
+    fontSize: 14,
+    color: '#666666',
+    marginTop: 10,
+    marginBottom: 30,
+  },
+  registerLink: {
+    color: '#3ad5ec',
+    fontWeight: 'bold',
+  },
+});

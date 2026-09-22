@@ -1,35 +1,41 @@
 import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
-import styles from '../../../assets/styles/login/login';
+import styles from '../../../assets/styles/login/register';
 
-export default function Login() {
+export default function Register() {
   return (
     <View style={styles.root}>
-      {/* Imagen de fondo anclada arriba */}
       <Image
         source={require('../../../assets/images/login/login-bg.jpg')}
         style={styles.bgImage}
         resizeMode="cover"
       />
 
-      {/* Contenido encima */}
       <View style={styles.overlay}>
-        {/* Logo */}
         <Image
           source={require('../../../assets/images/login/Logo-SportMatch.png')}
           style={styles.logo}
           resizeMode="contain"
         />
 
-        {/* Cuadro blanco */}
         <View style={styles.card}>
-          <Text style={styles.title}>INICIAR SESIÓN</Text>
-          <Text style={styles.subtitle}>Accede a tu cuenta para continuar</Text>
+          <Text style={styles.title}>CREAR CUENTA</Text>
+          <Text style={styles.subtitle}>Regístrate para comenzar</Text>
 
-          {/* Línea azul */}
           <View style={styles.blueLine} />
 
-          {/* Input correo */}
+          <View style={styles.inputContainer}>
+            <Image
+              source={require('../../../assets/images/login/icons/email-icon.png')}
+              style={styles.inputIcon}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Nombre completo"
+              placeholderTextColor="#999999"
+            />
+          </View>
+
           <View style={styles.inputContainer}>
             <Image
               source={require('../../../assets/images/login/icons/email-icon.png')}
@@ -44,7 +50,6 @@ export default function Login() {
             />
           </View>
 
-          {/* Input contraseña */}
           <View style={styles.inputContainer}>
             <Image
               source={require('../../../assets/images/login/icons/lock-icon.png')}
@@ -58,32 +63,33 @@ export default function Login() {
             />
           </View>
 
-          {/* Recordarme / Olvidé contraseña */}
-          <View style={styles.rowBetween}>
-            <View style={styles.checkboxRow}>
-              <View style={styles.checkbox} />
-              <Text style={styles.checkboxLabel}>Recordarme</Text>
-            </View>
-            <Text style={styles.forgotText}>¿Olvidaste tu contraseña?</Text>
+          <View style={styles.inputContainer}>
+            <Image
+              source={require('../../../assets/images/login/icons/lock-icon.png')}
+              style={styles.inputIcon}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Confirmar contraseña"
+              placeholderTextColor="#999999"
+              secureTextEntry
+            />
           </View>
 
-          {/* Botón principal */}
           <TouchableOpacity style={styles.mainButton}>
-            <Text style={styles.mainButtonText}>Iniciar sesión</Text>
+            <Text style={styles.mainButtonText}>Registrarse</Text>
             <Image
               source={require('../../../assets/images/login/icons/arrow-icon.png')}
               style={styles.mainButtonIcon}
             />
           </TouchableOpacity>
 
-          {/* Divisor */}
           <View style={styles.dividerRow}>
             <View style={styles.dividerLine} />
-            <Text style={styles.dividerText}>o continúa con</Text>
+            <Text style={styles.dividerText}>o regístrate con</Text>
             <View style={styles.dividerLine} />
           </View>
 
-          {/* Botones sociales lado a lado */}
           <View style={styles.socialRow}>
             <TouchableOpacity style={styles.socialButton}>
               <Image
@@ -102,14 +108,13 @@ export default function Login() {
             </TouchableOpacity>
           </View>
 
-          {/* Registro - navega a /register */}
           <Text style={styles.registerText}>
-            ¿No tienes una cuenta?{' '}
+            ¿Ya tienes una cuenta?{' '}
             <Text
               style={styles.registerLink}
-              onPress={() => router.push('/register')}
+              onPress={() => router.push('/')}
             >
-              Regístrate aquí
+              Inicia sesión
             </Text>
           </Text>
         </View>
