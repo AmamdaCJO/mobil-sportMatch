@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image } from 'react-native';
 import styles from '../../../assets/styles/inicio/inicio';
+import Login from '../login/login';
 
 export default function Inicio() {
-  const [mostrarWelcome, setMostrarWelcome] = useState(false);
+  const [mostrarLogin, setMostrarLogin] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setMostrarWelcome(true), 8000);
+    const timer = setTimeout(() => setMostrarLogin(true), 8000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (!mostrarWelcome) {
+  if (!mostrarLogin) {
     return (
       <View style={styles.container}>
         <Image
@@ -22,9 +23,5 @@ export default function Inicio() {
     );
   }
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcomeText}>Welcome</Text>
-    </View>
-  );
+  return <Login />;
 }
