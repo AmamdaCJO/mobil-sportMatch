@@ -36,7 +36,7 @@ export default function ResetPasswordScreen() {
                     placeholder="••••••••"
                 />
 
-                //Si la contraseña en diferente
+                {/*Si la contraseña en diferente*/}
                 {confirm.length > 0 && password !== confirm &&
                     (
                         <Text className="text-red-500 text-sm mt-1">
@@ -44,7 +44,7 @@ export default function ResetPasswordScreen() {
                         </Text>
                     )
                 }
-                //Si la contraseña es igual
+                {/*Si la contraseña es igual*/}
                 {
                     confirm.length > 0 && password === confirm &&
                     (
