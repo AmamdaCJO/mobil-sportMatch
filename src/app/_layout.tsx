@@ -1,3 +1,4 @@
+// src/app/_layout.tsx
 import "../../global.css";
 import { Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
@@ -17,15 +18,14 @@ export default function RootLayout() {
     }
   }, [loaded, error]);
 
-  if (!loaded && !error) {
-    return null;
-  }
+  if (!loaded && !error) return null;
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
       <Stack.Screen name="(auth)/login" />
       <Stack.Screen name="(auth)/register" />
+      <Stack.Screen name="(tabs)/inicio" />
     </Stack>
   );
 }

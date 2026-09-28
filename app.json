@@ -36,7 +36,8 @@
       ],
       "@react-native-vector-icons/feather",
       "@react-native-vector-icons/fontawesome",
-      "@react-native-vector-icons/fontawesome6"
+      "@react-native-vector-icons/fontawesome6",
+      "@react-native-community/datetimepicker"
     ],
     "experiments": {
       "typedRoutes": true,
