@@ -12,7 +12,7 @@ export default function ResetPasswordScreen() {
     const isValid = password.length >= 6 && password === confirm;
 
     const handleReset = () => {
-        router.replace('/auth/login');
+        router.replace('/(auth)/login');
     };
 
     return (
