@@ -39,7 +39,7 @@ export default function Login() {
 
       await storage.guardarSesion(access_token, usuario);
 
-      router.replace('/(tabs)/inicio');
+      router.replace('/perfil');
     } catch (error: any) {
       Alert.alert('Error al iniciar sesión', error.message);
     } finally {
