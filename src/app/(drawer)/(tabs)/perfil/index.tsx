@@ -1,4 +1,3 @@
-// app/(drawer)/(tabs)/perfil/index.tsx
 import {
   View,
   Text,
