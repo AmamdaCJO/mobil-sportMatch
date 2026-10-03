@@ -12,6 +12,8 @@ interface InputFieldProps {
   rightIcon?: ReactNode;
   onRightIconPress?: () => void;
   editable?: boolean;
+  borderColor?: string;
+  borderWidth?: number;
 }
 
 export default function InputField({
@@ -25,9 +27,14 @@ export default function InputField({
   rightIcon,
   onRightIconPress,
   editable = true,
+  borderColor = '#dddddd',
+  borderWidth = 1,
 }: InputFieldProps) {
   return (
-    <View className="flex-row items-center border border-[#dddddd] rounded-lg px-3 h-[50px] mb-[15px] bg-[#fafafa]">
+    <View
+      className="flex-row items-center rounded-lg px-3 h-[50px] mb-[15px] bg-[#fafafa]"
+      style={{ borderColor, borderWidth }}
+    >
       {icon && <View className="mr-[10px]">{icon}</View>}
 
       <TextInput
