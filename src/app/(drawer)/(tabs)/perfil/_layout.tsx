@@ -1,12 +1,9 @@
-import "../../global.css";
 import { Stack } from 'expo-router';
 
-export default function RootLayout() {
+export default function PerfilLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
-      <Stack.Screen name="(auth)" />
-      <Stack.Screen name="(drawer)" />
     </Stack>
   );
 }

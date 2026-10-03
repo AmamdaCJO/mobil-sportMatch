@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { View, Image, Text } from 'react-native';
-import styles from '../../../assets/styles/inicio/inicio';
 
 export default function Inicio() {
   const [mostrarWelcome, setMostrarWelcome] = useState(false);
@@ -12,10 +11,10 @@ export default function Inicio() {
 
   if (!mostrarWelcome) {
     return (
-      <View style={styles.container}>
+      <View className="flex-1 bg-black justify-center items-center">
         <Image
-          source={require('../../../assets/images/LogotipoPrincipal.png')}
-          style={styles.logo}
+          source={require('../../../../assets/images/Logo-SportMatch.webp')}
+          className="w-[250px] h-[250px]"
           resizeMode="contain"
         />
       </View>
@@ -23,8 +22,8 @@ export default function Inicio() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcomeText}>Welcome</Text>
+    <View className="flex-1 bg-black justify-center items-center">
+      <Text className="text-white text-4xl font-bold">Welcome</Text>
     </View>
   );
 }
