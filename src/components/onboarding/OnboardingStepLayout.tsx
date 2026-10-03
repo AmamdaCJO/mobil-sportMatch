@@ -2,8 +2,8 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import CustomButton from '../ui/CustomButton';
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 type Props = {
     step: number;

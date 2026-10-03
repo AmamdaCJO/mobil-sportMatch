@@ -20,6 +20,4 @@ describe('OnboardingStepLayout - Progreso', () => {
             throw error;
         }
     });
-
-
 });

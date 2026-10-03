@@ -1,17 +1,35 @@
+import http from 'node:http';
+
 describe('Conexión con API', () => {
-
     test('debe existir conexión con la API', async () => {
-        const url = 'http://127.0.0.1:5000/api/health';
+        const response = await new Promise<{
+            statusCode: number;
+            body: string;
+        }>((resolve, reject) => {
+            const request = http.get(
+                'http://127.0.0.1:5000/api/health',
+                (response) => {
+                    let body = '';
 
-        const response = await fetch(url);
+                    response.on('data', (chunk) => {
+                        body += chunk;
+                    });
 
-        console.log('URL:', url);
-        console.log('Response completa:', response);
-        console.log('Tipo de response:', typeof response);
-        console.log('Status:', response?.status);
-        console.log('OK:', response?.ok);
+                    response.on('end', () => {
+                        resolve({
+                            statusCode: response.statusCode ?? 0,
+                            body,
+                        });
+                    });
+                }
+            );
 
-        expect(response?.ok).toBe(true);
+            request.on('error', reject);
+        });
+
+        console.log('Status:', response.statusCode);
+        console.log('Body:', response.body);
+
+        expect(response.statusCode).toBe(200);
     });
-
 });
