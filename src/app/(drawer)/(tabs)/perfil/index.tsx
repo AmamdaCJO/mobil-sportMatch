@@ -262,28 +262,28 @@ export default function Perfil() {
       <View className="h-px bg-gray-200" />
 
       {/* ===== MENÚ INFERIOR ===== */}
-      <View className="flex-row justify-around items-center py-3 bg-white">
-        <TouchableOpacity className="items-center">
-          <MaterialIcons name="home" size={24} color="#2563eb" />
-          <Text className="text-xs text-blue-600 mt-1">Inicio</Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="items-center">
-          <MaterialIcons name="public" size={24} color="#9ca3af" />
-          <Text className="text-xs text-gray-400 mt-1">Comunidad</Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="items-center">
-          <MaterialIcons name="ondemand-video" size={24} color="#9ca3af" />
-          <Text className="text-xs text-gray-400 mt-1">Teams</Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="items-center">
-          <MaterialIcons name="event" size={24} color="#9ca3af" />
-          <Text className="text-xs text-gray-400 mt-1">Eventos</Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="items-center">
-          <MaterialIcons name="settings" size={24} color="#9ca3af" />
-          <Text className="text-xs text-gray-400 mt-1">Configuración</Text>
-        </TouchableOpacity>
-      </View>
+    {/*  <View className="flex-row justify-around items-center py-3 bg-white">*/}
+    {/*    <TouchableOpacity className="items-center">*/}
+    {/*      <MaterialIcons name="home" size={24} color="#2563eb" />*/}
+    {/*      <Text className="text-xs text-blue-600 mt-1">Inicio</Text>*/}
+    {/*    </TouchableOpacity>*/}
+    {/*    <TouchableOpacity className="items-center">*/}
+    {/*      <MaterialIcons name="public" size={24} color="#9ca3af" />*/}
+    {/*      <Text className="text-xs text-gray-400 mt-1">Comunidad</Text>*/}
+    {/*    </TouchableOpacity>*/}
+    {/*    <TouchableOpacity className="items-center">*/}
+    {/*      <MaterialIcons name="ondemand-video" size={24} color="#9ca3af" />*/}
+    {/*      <Text className="text-xs text-gray-400 mt-1">Teams</Text>*/}
+    {/*    </TouchableOpacity>*/}
+    {/*    <TouchableOpacity className="items-center">*/}
+    {/*      <MaterialIcons name="event" size={24} color="#9ca3af" />*/}
+    {/*      <Text className="text-xs text-gray-400 mt-1">Eventos</Text>*/}
+    {/*    </TouchableOpacity>*/}
+    {/*    <TouchableOpacity className="items-center">*/}
+    {/*      <MaterialIcons name="settings" size={24} color="#9ca3af" />*/}
+    {/*      <Text className="text-xs text-gray-400 mt-1">Configuración</Text>*/}
+    {/*    </TouchableOpacity>*/}
+    {/*  </View>*/}
     </View>
   );
 }
