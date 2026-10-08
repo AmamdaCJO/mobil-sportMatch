@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useState } from 'react';
+import AppHeader from "@/components/ui/AppHeader";
 
 // Tipo de cada sección disponible
 type Seccion = 'insignias' | 'videos' | 'amigos' | 'eventos';
@@ -159,28 +160,8 @@ export default function Perfil() {
   return (
     <View className="flex-1 bg-white">
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* ===== MENÚ SUPERIOR ===== */}
-        <View className="flex-row items-center justify-between px-4 pt-12 pb-3 bg-white">
-          <Text className="text-xl font-bold text-gray-900">SportMatch</Text>
 
-          <View className="flex-row items-center gap-4">
-            <TouchableOpacity>
-              <MaterialIcons name="shopping-cart" size={24} color="#111827" />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <MaterialIcons name="refresh" size={24} color="#111827" />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <MaterialIcons name="share" size={24} color="#111827" />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <MaterialIcons name="search" size={24} color="#111827" />
-            </TouchableOpacity>
-          </View>
-        </View>
 
-        {/* Línea divisora */}
-        <View className="h-px bg-gray-200" />
 
         {/* ===== CABECERA DE PERFIL ===== */}
         <View className="flex-row items-center px-4 pt-6">
