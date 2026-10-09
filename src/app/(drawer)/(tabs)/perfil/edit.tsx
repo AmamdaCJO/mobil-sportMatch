@@ -17,6 +17,12 @@ export default function EditPerfil() {
                 </View>
                 <View>
                     <Text className="text-xl font-bold text-blue-500">
+                        Foto de perfil
+                    </Text>
+                    <Text>Subir nueva foto de perfil</Text>
+                </View>
+                <View>
+                    <Text className="text-xl font-bold text-blue-500">
                         Nombre Completo
                     </Text>
                     <TextInput className="rounded-lg border border-sky-300 px-4 py-3 text-sky-500"
