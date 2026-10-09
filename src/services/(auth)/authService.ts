@@ -13,7 +13,6 @@ export interface Usuario {
   correo: string;
   rol: string;
   estado_cuenta: string;
-  // ...los demás campos de to_dict()
 }
 
 export interface LoginResponse {
@@ -22,6 +21,17 @@ export interface LoginResponse {
 }
 
 export const authService = {
+  // GET /api/health
+  async checkConnection(): Promise<boolean> {
+    try {
+      const response = await api.get('/health');
+
+      return response.status >= 200 && response.status < 300;
+    } catch {
+      return false;
+    }
+  },
+
   // POST /api/auth/login
   async login(payload: LoginPayload): Promise<LoginResponse> {
     const { data } = await api.post<LoginResponse>('/auth/login', payload);

@@ -114,7 +114,7 @@ export default function Register() {
       console.log('Respuesta:', response);
 
       await storage.guardarSesion(response.access_token, response.usuario);
-      router.replace('/(tabs)/inicio');
+      router.replace('/onboarding/step1');
     } catch (error: any) {
       console.log('Error:', error);
       Alert.alert('Error al registrarse', error?.message || 'Error desconocido');
