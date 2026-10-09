@@ -25,7 +25,7 @@ export default function ForgotPasswordScreen() {
             <View className="mt-8">
                 <CustomButton
                     title="Enviar código"
-                    onPress={() => router.push('/auth/verify-code')}
+                    onPress={() => router.push('/(auth)/verify-code')}
                     disabled={!email.includes('@')}
                 />
             </View>
