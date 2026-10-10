@@ -16,9 +16,6 @@ export default function DrawerLayout() {
                         backgroundColor: '#F8FAFC',
                         width: 280,
                     },
-
-                    // 👇 Evita que el header se meta debajo
-                    // de la barra de estado
                     headerStatusBarHeight: 0,
                 }}
             >
