@@ -1,4 +1,6 @@
-import {ScrollView, Text, View} from "react-native";
+import {ScrollView, Text, TouchableOpacity, View} from "react-native";
+import {colors} from "@/theme";
+import {router} from "expo-router";
 
 export default function Configuracion() {
     return (
@@ -33,6 +35,19 @@ export default function Configuracion() {
 
                 <Text className="py-2">Términos de servicio</Text>
                 <Text className="py-2">Política de privacidad</Text>
+            </View>
+
+            <View className="mb-6">
+                <TouchableOpacity
+                    onPress={() => router.push('/(auth)/login')}
+                    className="rounded-xl p-4 items-center"
+                    style={{ backgroundColor: colors.brand.rojo }}>
+                    <Text
+                        className="font-bold text-base"
+                        style={{ color: colors.brand.blanco }}>
+                        Cerrar sesión
+                    </Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
 

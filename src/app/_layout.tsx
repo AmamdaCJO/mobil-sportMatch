@@ -6,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 export default function RootLayout() {
     return (
         <SafeAreaProvider>
-            <StatusBar style="dark" backgroundColor="#FFFFFF" />
+            <StatusBar style="dark" />
             <Stack
                 screenOptions={{
                     headerShown: false,
