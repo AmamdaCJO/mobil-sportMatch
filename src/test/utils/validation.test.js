@@ -4,7 +4,7 @@ describe('Validación de contraseña', () => {
 
     test('debe mostrar un mensaje cuando la contraseña es menor a 8 caracteres', () => {
         try {
-            const result = validatePassword('12345688888888');
+            const result = validatePassword('1234567');
 
             expect(result).toBe(
                 'La contraseña debe tener al menos 8 caracteres'
